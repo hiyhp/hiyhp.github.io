@@ -1,0 +1,23 @@
+/* 全局设置*/
+body ,html{
+    width: 98%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;    /*使真个圈口被body占据，不会出现滚动条*/
+}
+
+body {  
+    background-image: url('../Assets/Img/bg.jpg'); /* 设置背景图片的路径 */  
+    background-size: cover; /* 使背景图片覆盖整个视口 */  
+    background-repeat: no-repeat; /* 防止背景图片重复 */  
+    background-position: center center; /* 使背景图片在视口中居中 */  
+    background-size: cover;
+}
+
+/*每日一言*/
+.daily_content{
+    position:absolute;
+    top: 50%;
+    left:25%;
+    overflow: auto;
+}
