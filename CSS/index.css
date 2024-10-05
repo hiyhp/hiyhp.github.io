@@ -1,23 +1,105 @@
 /* 全局设置*/
-body ,html{
+body,
+html {
+    position: relative;
     width: 98%;
     height: 100%;
     box-sizing: border-box;
-    overflow: hidden;    /*使真个圈口被body占据，不会出现滚动条*/
+    overflow: hidden;
+    /*使真个圈口被body占据，不会出现滚动条*/
 }
 
-body {  
-    background-image: url('../Assets/Img/bg.jpg'); /* 设置背景图片的路径 */  
-    background-size: cover; /* 使背景图片覆盖整个视口 */  
-    background-repeat: no-repeat; /* 防止背景图片重复 */  
-    background-position: center center; /* 使背景图片在视口中居中 */  
+body {
+    position: relative;
+    background-image: url('../Assets/Img/bg_mistryRain.png');
+    /* 设置背景图片的路径 */
+    background-size: cover;
+    /* 使背景图片覆盖整个视口 */
+    background-repeat: no-repeat;
+    /* 防止背景图片重复 */
+    background-position: center center;
+    /* 使背景图片在视口中居中 */
     background-size: cover;
 }
 
+
 /*每日一言*/
-.daily_content{
-    position:absolute;
-    top: 50%;
-    left:25%;
-    overflow: auto;
+.dailyWordContainer {
+
+    position: fixed;
+    top: 45vh;
+    left: 16vw;
+    width: 10vw;
+    height: 20vh;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: visible;
+    text-align: center;
+    min-width: 200px;
+    min-height: 114px;
+    border: blue solid;
+
 }
+.textBox {
+    padding: 20px;
+    background: #ffffff0e;
+    border-radius: 8px;
+    /* 圆角*/
+    box-shadow: 0 2px 2px rgba(255, 255, 255, 0.267);
+    /*在元素中添加阴影效果，参数为：x偏移量，y偏移量，模糊半径，阴影扩散半径，阴影颜色rgba*/
+    position: relative;
+    z-index: 1;
+}
+p.dailyWord {
+    font-size: 16px;
+}
+
+
+/* 功能区*/
+    .functionSection{
+        display: grid;  
+        position: fixed;
+        top:35vh;
+        left: 980px;
+        width: 560px;
+        height: 360px;
+        min-width: 500px;
+        grid-template-columns: repeat(2, 1fr);  
+        grid-template-rows: repeat(2, 1fr);  
+        width: 200px; /* 根据需要调整表格宽度 */  
+        border: 3px solid red ;
+    }
+    .cell{
+        width: 100%;
+        height: 100%;
+
+    }
+    .cross-line{
+        position: absolute;
+        background-color: rgba(65, 33, 33, 0.37);
+    }
+
+    .horizontal{
+        top: 50%; /* 水平居中 */  
+        left: 0;  
+        right: 0;  
+        height: 2px; /* 线条宽度 */  
+        transform: translateY(-50%); /* 垂直居中 */  
+        width: 80%; /* 线条长度略短于表格宽度 */  
+        margin: 0 auto; /* 水平居中 */  
+    }
+    .vertical {  
+        left: 50%; /* 垂直居中 */  
+        top: 0;  
+        bottom: 0;  
+        width: 2px; /* 线条宽度 */  
+        transform: translateX(-50%); /* 水平居中 */  
+        height: 80%; /* 线条长度略短于表格高度 */  
+        margin: auto 0; /* 垂直居中（虽然在这里不是必需的，因为已经通过transform定位） */  
+    }
+    /*美图*/
+    /*视频*/
+    /*音乐*/
+    /*游戏*/
+/*功能区end*/
+
